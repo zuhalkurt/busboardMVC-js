@@ -1,14 +1,20 @@
 const Test = require('../models/Test');
 
-module.exports = (req, res) => {
-
+exports.getTestData = (req, res) => {
 	let data = [
-		new Test('Justin Trudeau', 13),
-		new Test('Jacinda Ardern', 2),
-		new Test('Angela Merkle', 35),
+		new Test('Test name', 12),
+		new Test('Second name', 13)
 	];
+	res.render('testView', {
+		data : data,
+	});
+};
 
-
+exports.getSecondTestData = (req, res) => {
+	let data = [
+		new Test('other name', 15),
+		new Test('other second name', 16)
+	];
 	res.render('testView', {
 		data : data,
 	});

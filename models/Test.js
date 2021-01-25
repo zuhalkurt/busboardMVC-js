@@ -4,7 +4,7 @@ class Test{
 		this.id = id;
 	}
 
-	getTestData() {
+	showTestData() {
 		return this.name + ", id: " + this.id; 
 	};
 
@@ -13,8 +13,4 @@ class Test{
 	}
 };
 
-
-
 module.exports = Test;
-
-
