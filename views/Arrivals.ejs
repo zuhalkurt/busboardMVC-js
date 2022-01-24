@@ -1,0 +1,23 @@
+<!-- views/testView.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Arrivals</title>
+</head>
+
+<body id="home">
+	<h1>Arrival Buses</h1>
+	<ul>
+		<%
+			data.forEach((arrivals) => { %>
+			<li>
+				<h2>Arrival buses to <%= arrivals.destinationName %></h2>
+				<p><%= arrivals.timeToStation %></p>
+			</li>
+		<% });
+		%>
+	</ul>
+</body>
+</html>
