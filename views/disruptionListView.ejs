@@ -1,0 +1,26 @@
+<!-- views/disruptionListView.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Disruptions</title>
+</head>
+
+<body id="home">
+	<h1>Disruptions</h1>
+	<ul>
+		<%
+			data.forEach((disruption) => { %>
+			<li>
+				<h2>Disruption at <%= disruption.stationName %></h2>
+				<p><%= disruption.description %></p>
+				<p><em>
+					From <%= disruption.fromDate %> to <%= disruption.toDate %>
+				</em></p>
+			</li>
+		<% });
+		%>
+	</ul>
+</body>
+</html>
